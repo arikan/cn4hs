@@ -1,0 +1,356 @@
+/*TODO:
+Update local CSS with remote
+update to bootstrap 3.2
+search icon
+navbar reorganize
+header image resize, fit to screnen
+header text overlay remove
+comment style to fix
+make favicon
+*/
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+   background-color: #EDEDED;
+   background: url("../img/bg/handmadepaper.png") repeat;
+   /*cn4hs-background.png*/
+}
+
+@font-face {
+  font-family: DaxCompact;
+  src: url('../font/DaxCompact.ttf');
+}
+@font-face {
+  font-family: DaxCompactLight;
+  src: url('../font/DaxCompact-Light.ttf');
+}
+@font-face {
+  font-family: DaxCompactMedium;
+  src: url('../font/DaxCompact-Medium.ttf');
+}
+@font-face {
+  font-family: DaxCompactBold;
+  src: url('../font/DaxCompact-Bold.ttf');
+}
+@font-face {
+  font-family: AmorSansPro;
+  src: url('../font/AmorSansPro.otf');
+}
+@font-face {
+  font-family: AmorSansProBold;
+  src: url('../font/AmorSansPro-Bold.otf');
+}
+
+
+a { color: #e3623c; } /*#bc3e47*/
+a:hover { color: #575063; }
+/*img { width: 150px; }*/
+h2.entry-title { margin: 20px 0; }
+h2 { line-height: 100%; }
+h3 { line-height: 100%; margin:25px 0 10px 0; }
+h4 { line-height: 100%; margin:20px 0 10px 0; }
+/*h4.entry-title { font-family: AmorSansProBold; }*/
+.affix { position:fixed; }
+.thumbnails h4 { margin:0 0 10px 0; }
+.thumbnails li img { margin-bottom: 20px; }
+/*.span2 { margin-left:0 !important; }*/
+
+.navbar .nav>li {font-family: AmorSansProBold; text-transform: uppercase; }
+.navbar .nav>li>a { color: #e3623c; font-weight: bold; }
+.navbar .nav li.dropdown>.dropdown-toggle .caret { border-top-color: #e3623c;  border-bottom-color: #e3623c; }
+.nav .dropdown-toggle .caret { border-top-color: #e3623c;  border-bottom-color: #e3623c; }
+.caret { border-top: 4px solid #e3623c; }
+
+ul.chronicles { margin:0; }
+ul.chronicles li { list-style:none; margin-bottom: 10px; font-size:1.1em; }
+a.pdf { font-size:1.4em; }
+a.pdf i.icon-book-open-1 { margin: 0 25px 0 -4px; font-size:1.4em; }
+
+.post-nav { clear:both; margin-top:20px; }
+
+#headerimg h1 { font-size: 1.4em; }
+
+#qtranslate-chooser { margin: 16px 0 0 0; }
+#qtranslate-chooser li { float:right; margin: 0px 10px 0 0; list-style-type: none; line-height:130%; }
+#qtranslate-chooser li.active a { font-weight: bold; color: #474054; }
+
+#map-canvas {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+select#qtrans_select_qtranslate-chooser {
+  width:80px;
+  height: 25px;
+  line-height:25px;
+  margin-top: 32px;
+  font-size: 0.9em;
+}
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+
+.banner { }
+.page-header {
+   margin: 20px 0 20px;
+}
+.page-header h3 {
+   font-size: 2.0em;
+   font-family: AmorSansPro;
+   text-transform: uppercase;
+}
+.navbar .brand {
+  font-weight: 400;
+  letter-spacing:-0.04em;
+}
+.navbar .nav {
+  margin: 0 10px 0 -10px;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.sticky {
+   border-bottom: 1px solid #aaa;
+   padding: 20px;
+   /*background:url("http://cn4hs.org/assets/img/police-tear-gas2.jpg") no-repeat;*/
+   /*background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0.49) 99%,rgba(0,0,0,0.5) 100%), url('../img/police-tear-gas2.jpg') no-repeat;*/
+   /*background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 84%, rgba(0,0,0,0.8) 100%);*/
+
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%), url('../img/cn4hs-header.png') no-repeat; /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url('../img/cn4hs-header.png') no-repeat; /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%), url('../img/cn4hs-header.png') no-repeat; /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%), url('../img/cn4hs-header.png') no-repeat; /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%), url('../img/cn4hs-header.png') no-repeat; /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%), url('../img/cn4hs-header.png') no-repeat; /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ), url('../img/cn4hs-header.png') no-repeat; /* IE6-9 */
+
+   background-size: cover;
+}
+.sticky h3, .sticky p.lead {
+   color:#FFF;
+}
+.sticky h3 {
+   margin: 5px 0 25px 0;
+}
+.sticky a:hover{
+   color:#FFF;
+}
+.content { }
+
+.form-search input {
+   margin-top:20px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   /*font-family: AmorSansPro;*/
+}
+#searchform {
+   margin:0 0 15px 0;
+   float: right;
+}
+.form-search input.search-query{
+  width: 270px;
+}
+.navbar .btn {
+  margin-top:20px;
+}
+
+ul.welcome {
+   list-style: none;
+   margin-left: -5px;
+   margin-top:130px
+}
+ul.welcome li {
+   line-height: 20px;
+   color: #efefef;
+   margin-right: 8px;
+   margin-left: 0px;
+   padding:9px;
+   min-height: 150px;
+}
+.sticky ul.welcome li a {
+  font-weight: bold; color: #FFFFFF; text-shadow: 2px 2px #333333;
+}
+ul.welcome li a i {
+   margin-right: 7px;
+   margin-top: 4px;
+   margin-left: -22px;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+}
+/* PRINT VERSION */
+@media print {
+   /*h3:after {content: ' - PRINT'; display: inline;}*/
+}
+/* PHONE VERSION */
+@media only screen and (min-width: 320px) {
+   /*h3:after {content: ' - PHONE'; display: inline;}*/
+   .sticky { }
+   .sticky ul.welcome li a { font-size: 2.0em;  }
+   .sticky ul.welcome li { font-size: 1.5em; line-height:28px; }
+   footer {padding: 20px;}
+
+}
+/* TABLET VERSION */
+@media only screen and (min-width: 768px) {
+   /*h3:after {content: ' - TABLET'; display: inline;}*/
+   .sticky { height: 520px; }
+   .sticky ul.welcome li a { font-size: 1.5em; }
+   .sticky ul.welcome li { font-size: 1.0em; line-height:20px; }
+   footer {padding: 20px;}
+}
+/* DESKTOP VERSION */
+@media only screen and (min-width: 980px) {
+   /*h3:after {content: ' - DESKTOP'; display: inline;}*/
+   .sticky { height: 320px; }
+   .sticky ul.welcome li a { font-size: 1.5em; }
+   .sticky ul.welcome li { font-size: 1.0em; line-height:20px; }
+}
+
+i.icon-globe-3 {
+   font-size:200px;
+   margin-left:-360px;
+   margin-top:-60px;
+   color: #ddd;
+}
+
+ul.entry-tags {
+   margin: 0;
+   margin-bottom: 15px;
+}
+ul.entry-tags li {
+   float:left;
+   list-style: none;
+   margin-right: 5px;
+}
+ul.entry-tags li span a {
+   color:#FFF;
+   /*font-weight: 200;*/
+}
+article {
+   clear:both;
+}
+
+.addthis_toolbox {
+   margin-top:30px;
+}
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+.sidebar h3 {
+   font-size: 1.0em;
+   font-family: AmorSansProBold;
+   text-transform: uppercase;
+}
+.fontana-message { }
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { color:#999; font-size: 0.9em}
+.hentry .byline { }
+.hentry .entry-content { margin-top:10px; }
+.hentry .entry-summary { margin-top:10px; }
+.hentry footer { }
+.hentry header .categories a {
+   background: #fff;
+   padding:2px 5px 2px 5px;
+   margin-right:3px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+.box {
+   /*border:1px solid #eee;*/
+   border-right:1px solid #ccc;
+   border-bottom:1px solid #ccc;
+   padding: 10px;
+   margin-bottom: 20px;
+   margin-left: 0;
+   margin-right: 20px;
+   background-color: #fff;
+}
+.box h4 {
+   margin-top: 0px;
+}
+.box article {
+   font-size:0.9em;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer { clear: both; }
+footer a { color: #FFFFFF; }
+footer a:hover { color: #333333; text-decoration: none; }
+.content-info {
+  margin-top:30px;
+  padding-top:25px;
+  color:#FFFFFF;
+  min-height:100px;
+  line-height:140%;
+  background-color:#7F687F;
+}
+.content-info .caption {
+  display: block;
+  font-size: 0.80em;
+  line-height: 1.2em;
+}
+.content-info img {
+  display: block;
+  margin-bottom: 10px;
+}
+.content-info a:hover {
+  color: #000000;
+}
+.content-info .span2 {
+  margin-bottom: 20px;
+}
+footer h3 {
+  font-size: 1.2em;
+  font-family: AmorSansPro;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+

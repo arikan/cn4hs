@@ -1,0 +1,52 @@
+<?php
+/*
+Template Name: Map
+*/
+?>
+
+<?php get_template_part('templates/page', 'header'); ?>
+
+<div id="map" style="height:320px; margin-bottom:20px;"></div>
+
+<script type="text/javascript">
+
+  var locations = [
+      ['Turkey', 41.02919, 28.972486,                   "hCa – Helsinki Citizens’ Assembly Turkey", "http://cn4hs.org/category/turkey", "http://www.hyd.org.tr", "http://cn4hs.org/wp-content/themes/roots/assets/img/logos/hYd.png"],
+      ['Serbia', 45.151053, 20.541,                     "SeConS – Development Initiative Group", "http://cn4hs.org/category/serbia", "http://www.secons.net", "http://cn4hs.org/wp-content/themes/roots/assets/img/logos/Secons.png"],
+      ['Bosnia and Herzegovina', 43.834527, 18.422356,  "hCa – Helsinki Citizens’ Assembly", "http://cn4hs.org/category/bosnia-and-herzegovina", "http://www.omladina-bih.net/eng/orctuzla.htm", "http://cn4hs.org/wp-content/themes/roots/assets/img/logos/ORC.png"],
+      ['Montenegro', 42.843751, 19.087887,              "Association for Democratic Prosperity – ZID", "http://cn4hs.org/category/montenegro", "http://www.zid.org.me", "http://cn4hs.org/wp-content/themes/roots/assets/img/logos/zid.png"],
+      ['Bulgaria', 42.698586, 23.322258,                "The Institute for Regional and International Studies – IRIS", "http://cn4hs.org/category/bulgaria", "http://www.iris-bg.org", "http://cn4hs.org/wp-content/themes/roots/assets/img/logos/IRIS.jpg"],
+      ['Kosova', 42.638, 20.81274,                      "Centre for Research, Documentation and Publication – CRDP", "http://cn4hs.org/category/kosovo", "http://crdp-ks.org", "http://cn4hs.org/wp-content/themes/roots/assets/img/logos/CRDP.png"]
+  ];
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+                                  zoom: 5,
+                                  center: new google.maps.LatLng(41.343824400586925,29.963837062500044),
+                                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                  streetViewControl: false,
+                                  mapTypeControl: false
+                                });
+
+  var infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        htmlcontent = "<img src='"+locations[i][6]+"' width='70' style='float:left; margin-right:10px'><strong><a href='"+locations[i][5]+"' target='_blank'>"+locations[i][3]+"</a></strong><br /><a href='"+locations[i][4]+"'>"+locations[i][0]+"</a>";
+        infowindow.setContent(htmlcontent);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
+</script>
+
+<div class="span8">
+  <?php get_template_part('templates/content', 'page'); ?>
+</div>
