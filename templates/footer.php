@@ -11,7 +11,7 @@
           <a href="http://ec.europa.eu/" target="_blank">
             <img class="img-responsive" src="http://cn4hs.org/wp-content/themes/roots/assets/img/logos/eu.jpg">
             <span class="caption">
-              European Comission
+              This project is funded by the European Commission
             </span>
           </a>
         </div>
@@ -21,10 +21,16 @@
           </a>
         </div>
         <div class="span2">
-          Embassy of UK in Ankara
+          <a href="https://www.gov.uk/government/world/organisations/british-embassy-ankara" target="_blank">
+            <img class="img-responsive" src="http://cn4hs.org/wp-content/themes/roots/assets/img/logos/BritishEmbassy-Ankara-logo.png">
+            <!-- <span class="caption">Embassy of UK in Ankara</span> -->
+          </a>
         </div>
         <div class="span2">
-          FES
+          <a href="https://www.fes.de" target="_blank">
+            <img class="img-responsive" src="http://cn4hs.org/wp-content/themes/roots/assets/img/logos/FES-logo.png">
+            <!-- <span class="caption">FES</span> -->
+          </a>
         </div>
       </div>
 
@@ -89,7 +95,7 @@
         </div>
       </div>
 
-      <h3 style="margin-top:20px">
+<!--       <h3 style="margin-top:20px">
         <?php _e("<!--:en-->ASSOCIATES<!--:--><!--:tr-->İLİŞKİLER<!--:--><!--:hr-->PARTNERS<!--:--><!--:sq-->PARTNERS<!--:--><!--:bg-->PARTNERS<!--:-->"); ?>
       </h3>
 
@@ -107,7 +113,7 @@
           SEERN
         </div>
       </div>
-
+ -->
     </div>
   </div>
 </footer>

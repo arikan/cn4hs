@@ -1,15 +1,15 @@
 <?php
 /*
-Template Name: Chronicles Template
+Template Name: What is human security?
 */
 ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
 
-<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts("cat=20&paged=$paged"); ?>
+<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts("cat=21&paged=$paged"); ?>
 
 <?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('templates/content', get_post_format()); ?>
+  <?php get_template_part('templates/content', get_post_format()); ?>
 <?php endwhile; ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
